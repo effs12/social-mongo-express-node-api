@@ -2,8 +2,13 @@ import express from 'express'
 import dotenv from 'dotenv'
 import userRoutes from './modules/routes/userRoutes.js'
 import { errorHandler } from './modules/middleware/errorMiddleware.js'
+import connectDB from './modules/config/db.js'
 
+//Set always to top to read the ENV setup
 dotenv.config()
+
+connectDB()
+
 const app = express()
 const PORT = process.env.PORT || 5000
 
