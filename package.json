@@ -1,0 +1,22 @@
+{
+  "name": "social-mongo-express-node-api",
+  "version": "1.0.0",
+  "description": "Social Media API using MongoDB, ExpressJS and NodeJS",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": "https://github.com/effs12/social-mongo-express-node-api",
+  "author": "Frederick Lopez",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
