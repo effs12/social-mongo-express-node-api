@@ -4,6 +4,13 @@ import asyncHandler from 'express-async-handler'
 // @route   POST /api/users
 // @access  Public
 const registerUser = asyncHandler(async(req, res) => {
+    const { username, password } = req.body
+
+    if(!username || !password){
+        res.status(400)
+        throw new Error('Please add all fields')
+    }
+
     res.status(200).json({ message : 'Register New User'})
 })
 
