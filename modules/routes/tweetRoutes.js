@@ -5,10 +5,11 @@ import {
     editTweet,
     deleteTweet,
 } from '../controllers/tweetController.js'
+import { protect } from '../middleware/authMiddleware.js'
 const router = express.Router()
 
-router.route('/').get(getTweets).post(makeTweet)
-router.route('/:id').put(editTweet).delete(deleteTweet)
+router.route('/').get(protect,getTweets).post(protect,makeTweet)
+router.route('/:id').put(protect,editTweet).delete(protect,deleteTweet)
 
 
 export default router
