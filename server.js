@@ -1,6 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import userRoutes from './modules/routes/userRoutes.js'
+import tweetRoutes from './modules/routes/tweetRoutes.js'
 import { errorHandler } from './modules/middleware/errorMiddleware.js'
 import connectDB from './modules/config/db.js'
 
@@ -18,6 +19,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended : false }))
 
 app.use('/api/users', userRoutes)
+app.use('/api/tweets', tweetRoutes);
 
 app.use(errorHandler)
 
