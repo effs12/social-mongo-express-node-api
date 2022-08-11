@@ -3,10 +3,13 @@
 > SOCIAL API using MongoDB, Express and Node where User can register, login and create a tweet from API
 
 ## Features
+
+### USER API
 - Register Account:  method : `POST` - `http://localhost:5000/api/users/`
 - Login Account: method : `POST` - `http://localhost:5000/api/users/login`
 - Get User Account: method : `GET` - `http://localhost:5000/api/users/account`
 
+### TWEET API
 - Get User Tweet: method : `GET` - `http://localhost:5000/api/tweets/`
 - Make Tweet: method : `POST` - `http://localhost:5000/api/tweets/`
 - Edit Tweet: method : `PUT` - `http://localhost:5000/api/tweets/:id`
@@ -15,8 +18,8 @@
 ## Quick Start
 ### Env Variables
 
-1. Create your Db using MongoDB and get the connection
-2. Create a .env file in the root and add the following with MongoDB connection
+1. Create your database using MongoDB and copy the connection string 
+2. Create a .env file in the root and add the following with MongoDB connections
 
 ```
 # ENVIRONMENT SETUP
@@ -44,7 +47,7 @@ yarn
 // Run server
 yarn server
 
-// Server runs on http://localhost:5000 and client on http://localhost:3000
+// Server runs on http://localhost:5000
 ```
 
 ## License
