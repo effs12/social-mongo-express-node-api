@@ -75,7 +75,7 @@ Using the POST method, add username and password field and it's value to send a 
 }
 ```
 
-> Reminder : the Get User Account and Tweets api's are using the protected routes please don't forget to set the Bearer Token Value to Autorization.
+> Reminder : the Get User Account and Tweets API's are using the protected routes please don't forget to set the Bearer Token Value to Autorization.
 
 > How to set Bearer Token in Postman? : Get the "token" value from return object after logging in (see sample output), then click the Autorization Tab in Postman request, click the Type and select the Bearer Token. Now you can put the "token" value in input field of Bearer Token.
 
@@ -86,10 +86,10 @@ Make a request using GET method then send.
 Make a request Using the POST method, add the "content" field and it's value to send a text data request to the server using x-www-form-urlencoded.
 
 ### How to edit Tweet?
-2. Using the PUT method add the tweet ID in the request API URL `http://localhost:5000/api/tweets/:id` in request, add the "content" field and it's new value to send a text data request to the server using x-www-form-urlencoded.
+Using the PUT method add the tweet ID in the request API URL `http://localhost:5000/api/tweets/:id` in request, add the "content" field and it's new value to send a text data request to the server using x-www-form-urlencoded.
 
 ### How to delete Tweet?
-2. Using the DELETE method add the tweet ID in the request API URL `http://localhost:5000/api/tweets/:id`.
+Using the DELETE method add the tweet ID in the request API URL `http://localhost:5000/api/tweets/:id`.
 
 ### How get the current User all tweet?
 Make a request using GET method then send.
