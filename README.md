@@ -53,30 +53,47 @@ yarn server
 ## How to Test?
 > Using Postman or any API client Tester alike 
 
-1. After setting up the api to localhost. 
+1. After setting up the social-mongo-express-node-api and environment to localhost. 
 2. Open the Postman or any API Client Tester.
-3. Create a request by accesing the API URL REQUEST from Features section (EX : `http://localhost:5000/api/users/` ).
+3. Create a request set the method and API's URL.
+(see Features section EX: method POST - `http://localhost:5000/api/users/login` to login)
 
 ### How to Create and Login Account?
-> Using the POST method, add username and password and it's value to send a text data request to the server using x-www-form-urlencoded.
+Using the POST method, add username and password field and it's value to send a text data request to the server using x-www-form-urlencoded.
 
 #### Sample Input
 ```
     Username : User001
     Password : password123
 ```
-
-#### Output
+#### Sample Output
 ```javascript
 {
     "_id": "62f5e31da13697d6e8b3f2ed",
     "username": "User001",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjVlMzFkYTEzNjk3ZDZlOGIzZjJlZCIsImlhdCI6MTY2MDI4MjEwNiwiZXhwIjoxNjYyODc0MTA2fQ.5V05VWd71aTIGxlxBf"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6I"
 }
 ```
 
+> Reminder : the Get User Account and Tweets api's are using the protected routes please don't forget to set the Bearer Token Value to Autorization.
+
+> How to set Bearer Token in Postman? : Get the "token" value from return object after logging in (see sample output), then click the Autorization Tab in Postman request, click the Type and select the Bearer Token. Now you can put the "token" value in input field of Bearer Token.
+
 ### How get the current Account?
-> Get the token value from return object after logging In, then set it as Bearer Token value.
+Make a request using GET method then send.
+
+### How to create Tweet?
+Make a request Using the POST method, add the "content" field and it's value to send a text data request to the server using x-www-form-urlencoded.
+
+### How to edit Tweet?
+2. Using the PUT method add the tweet ID in the request API URL `http://localhost:5000/api/tweets/:id` in request, add the "content" field and it's new value to send a text data request to the server using x-www-form-urlencoded.
+
+### How to delete Tweet?
+2. Using the DELETE method add the tweet ID in the request API URL `http://localhost:5000/api/tweets/:id`.
+
+### How get the current User all tweet?
+Make a request using GET method then send.
+
 
 ## License
 The MIT License
