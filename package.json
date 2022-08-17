@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Social Media API using MongoDB, ExpressJS and NodeJS",
   "main": "server.js",
+  "engines" : {
+    "node" : "14x"
+  },
   "type": "module",
   "scripts": {
     "start": "node server.js",
